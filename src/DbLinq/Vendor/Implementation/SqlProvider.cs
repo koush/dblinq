@@ -1648,5 +1648,37 @@ namespace DbLinq.Vendor.Implementation
         {
             get { return true; }
         }
+
+
+	
+		public virtual string GetAutoIncrement()
+		{
+			return "AUTO_INCREMENT";
+		}
+
+		public virtual string GetPrimaryKey()
+		{
+			return "PRIMARY KEY";
+		}
+
+		public virtual string GetNotNull()
+		{
+			return "NOT NULL";
+		}
+
+		public virtual string GetUnique()
+		{
+			return "UNIQUE";
+		}
+
+		public virtual string GetColumnType(Type type)
+		{
+			if (type == typeof(int))
+				return "INTEGER";
+			else if (type == typeof(string))
+				return "TEXT";
+
+			throw new ArgumentException(string.Format("Unable to map {0} to a corresponding type.", type.Name));
+		}
     }
 }

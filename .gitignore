@@ -1,0 +1,8 @@
+bin
+obj
+*.suo
+build.dbg
+build.dbg.mono
+UpgradeLog.XML
+_UpgradeReport_Files
+*.user

@@ -1271,5 +1271,10 @@ namespace DbLinq.Data.Linq
         {
             throw new NotImplementedException();
         }
+
+		public DataMigrator GetDataMigrator()
+		{
+			return new DataMigrator(this);
+		}
     }
 }

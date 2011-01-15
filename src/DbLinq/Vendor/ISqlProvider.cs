@@ -316,5 +316,15 @@ namespace DbLinq.Vendor
         /// <param name="joins"></param>
         /// <returns></returns>
         SqlStatement GetJoinClauses(SqlStatement[] joins);
-    }
+
+		string GetAutoIncrement();
+
+		string GetPrimaryKey();
+
+		string GetNotNull();
+
+		string GetUnique();
+
+		string GetColumnType(System.Type type);
+	}
 }
