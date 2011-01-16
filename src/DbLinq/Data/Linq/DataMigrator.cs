@@ -158,7 +158,6 @@ namespace DbLinq.Data.Linq
 					command.ExecuteNonQuery();
 
 					dblinq_metadata.InsertOnSubmit(MemberToMetaData(member));
-
 					mDataContext.SubmitChanges();
 				}
 			}

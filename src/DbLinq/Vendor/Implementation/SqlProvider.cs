@@ -1677,6 +1677,8 @@ namespace DbLinq.Vendor.Implementation
 				return "INTEGER";
 			else if (type == typeof(string))
 				return "TEXT";
+			else if (type == typeof(long))
+				return "BIGINT";
 
 			throw new ArgumentException(string.Format("Unable to map {0} to a corresponding type.", type.Name));
 		}
